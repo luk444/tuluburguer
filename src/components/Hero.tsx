@@ -61,34 +61,27 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right: image */}
+          {/* Right: mascot */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-            className="order-1 lg:order-2 relative"
+            className="order-1 lg:order-2 relative flex items-center justify-center"
           >
-            <div className="relative">
-              {/* Checkerboard background block */}
-              <div className="absolute -top-6 -right-6 w-full h-full checkerboard rounded-3xl opacity-40" />
-
-              {/* Main image */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-4 ring-brand-blue">
-                <img
-                  src="https://images.pexels.com/photos/3915915/pexels-photo-3915915.jpeg?auto=compress&cs=tinysrgb&h=900&w=1200"
-                  alt="Hamburguesa doble con cheddar fundido, bacon y papas fritas"
-                  className="w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              </div>
+            <div className="relative w-full max-w-[560px] mx-auto">
+              <img
+                src="/LogoTuulu.png"
+                alt="Mascota de La Cocina de Tulu"
+                className="relative z-10 w-full h-auto max-h-[420px] sm:max-h-[520px] lg:max-h-[620px] object-contain drop-shadow-[0_18px_30px_rgba(38,52,147,0.28)]"
+                loading="eager"
+              />
 
               {/* Floating price tag */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="absolute -bottom-5 -left-5 bg-brand-orange text-white rounded-2xl px-5 py-3 shadow-xl rotate-[-4deg]"
+                className="absolute bottom-2 left-0 sm:-left-4 z-20 bg-brand-orange text-white rounded-2xl px-5 py-3 shadow-xl rotate-[-4deg]"
               >
                 <div className="text-xs uppercase font-bold tracking-widest opacity-90">Desde</div>
                 <div className="font-display text-3xl leading-none">$16.000</div>
@@ -99,7 +92,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -top-3 left-6 bg-brand-cream text-brand-blue rounded-full px-4 py-2 shadow-lg rotate-[6deg] border-2 border-brand-blue"
+                className="absolute top-4 right-2 sm:right-6 z-20 bg-brand-cream text-brand-blue rounded-full px-4 py-2 shadow-lg rotate-[6deg] border-2 border-brand-blue"
               >
                 <div className="font-display text-sm leading-tight">¡INCLUYEN<br />PAPAS!</div>
               </motion.div>
